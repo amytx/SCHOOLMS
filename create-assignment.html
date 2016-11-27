@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 
     <title>SchoolMS</title>
@@ -12,6 +13,54 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="users.json">
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var form = $('#assignment'); // contact form
+            var submit = $('#submit');  // submit button
+            var alert = $('.alert'); // alert div for show alert message
+            var assignmentName = $("aname").val();
+            var notes = $("notes").val();
+
+            var questions = [];
+            var answers = [];
+            for (var j = 0;j<2;j++){
+                questions[j]=$("question"+j).val()+" A:"+$("a"+j).val()+" B:"+$("b"+j).val();
+                if ($('c'+j)){
+                  questions[j]=questions[j]+" C"+$("c"+j)+" D"+$("d"+j).val();
+                }
+                answers[j]=$("ans"+j).val();
+            }
+
+            var data = JSON.parse(JSON.stringify(users));
+            console.log(data);
+        });
+
+            // form submit event
+            form.on('submit', function (e) {
+              console.log(e);
+                e.preventDefault(); // prevent default form submit
+                $.ajax({
+                    url: '/sms', // form action url
+                    type: 'POST', // form submit method get/post
+                    dataType: 'html', // request type html/json/xml
+                    data: form.serialize(), // serialize form data
+                    beforeSend: function () {
+                    },
+                    success: function (data) {
+                      console.log(data);
+                        alert.html(data).fadeIn(); // fade in response data
+                        form.trigger('reset'); // reset form
+                        submit.html('Send Email'); // reset submit button text
+                        window.location.href = "http://stackoverflow.com";
+                    },
+                    error: function (e) {
+                        console.log(e)
+                    }
+                });
+            });
+        });
+    </script>
 
   </head>
 
@@ -41,41 +90,36 @@
     <div class = "container">
       <div class="page-header">Assignment Creation Form</div>
     </div>
-    
+
     <div class = "container">
 
       <div class="col-sm-4"></div>
       <div class="col-sm-4">
         <div class="well well-lg">
-      
-          <form>
+
+          <form id="assignment" method="POST">
             <div class="form-group">
-              <label for="email">Assignment Name: </label>
-              <input type="email" class="form-control" id="email">
+              <label for="text">Assignment Name: </label>
+              <input type="text" class="form-control" id="aname">
             </div>
 
-            <div class="form-group">
-              <label for="comment">Select students:</label>
-              <select multiple class="form-control" id="sel2">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
-            </div>
 
             <div class="form-group">
               <label for="comment">Assignment notes:</label>
-              <textarea class="form-control" rows="5" id="comment"></textarea>
+              <textarea class="form-control" rows="4" id="notes"></textarea>
             </div>
-            
-            <button type="submit" class="btn btn-default">Submit</button>
-          </form>
+            <div id="dynamicInput">
+            </div>
+          </div>
 
+            <button type="button" class="btn btn-default" onClick="addQuestion('dynamicInput');">New Question</button>
+            
+            <a href="class-screen.html" class="btn btn-primary" role="button">Submit</a>
+          </form>
         </div>
       </div>
       <div class="col-sm-4"></div>
+      <br><br><br>
     </div>
 
 
@@ -84,6 +128,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="bootstrap.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/addQuestion.js" language="Javascript" type="text/javascript"></script>
   </body>
 </html>
