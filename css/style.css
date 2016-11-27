@@ -29,3 +29,47 @@ button{
   width: 40%;
   margin-right: 30px;
 }
+body {
+  padding-top: 50px;
+  background-color: #9FC131;
+}
+.em-text{
+  color:#9FC131 !important;
+}
+
+.jumbotron{
+  background-size: 100% 100%;
+}
+
+.page-header{
+	text-align: center;
+}
+
+h2{
+	text-align: center;
+}
+
+label{
+	text-align: left;
+}
+
+button{
+	text-align: center;
+}
+
+.jumbotron .app-btn{
+  width: 40%;
+  margin-right: 30px;
+}
+.hidestuff{
+  display: none;
+}
+.div1{
+  color:#9FC131;
+  background-color:#333;
+}
+.div2{
+    color:#9FC131
+    background-color:#d3d3d3;
+}
+
