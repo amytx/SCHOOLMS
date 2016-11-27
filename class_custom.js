@@ -22,7 +22,7 @@ function genClasses(){
 	for (var i = 0; i < id.courses.length();++i) {
 		var buttonName = i.tostring(); 
 		var html =' ';
-		html += "<button type='button' class='btn btn-default btn-lg btn-block' + name='" + buttonName + "'+ >" + id.courses[i] + "</button>";
+		html += "<button type='button' class='btn btn-default btn-lg btn-block' + name='" + buttonName + ">" + id.courses[i] + "</button>";
 		$('#existingClasses').html(html);
 	}
 }
