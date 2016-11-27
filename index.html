@@ -5,13 +5,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./js/login.js"></script>
+
 
 
     <title>SchoolMS</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
   </head>
 
@@ -28,65 +30,107 @@
           </button>
           <a class="navbar-brand em-text">SchoolMS</a>
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
+        <div class="col-md-6 col-sm-12" id="navbar" class="collapse navbar-collapse" id="inLineLeft">
           <ul class="nav navbar-nav">
+<<<<<<< HEAD
+            <li class="active"><a href="javascript:myFunction3();">Home</a></li>
+            <li><a href="javascript:myFunction3();">About</a></li>
+            <li><a href="javascript:myFunction3();">Contact</a></li>
+=======
             <!--<li><a href="#">Home</a></li>-->
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact Us</a></li>
+>>>>>>> d8bb109ca85ba07a8e98042c0518ea41c1658211
           </ul>
         </div><!--/.nav-collapse -->
+        <div class="col-md-4" id="navbar" class="collapse navbar-collapse" id="inLineRight">
+          <ul class="nav navbar-nav">
+            <li><a href="javascript:myFunction();">Login</a></li>
+            <li><a href="javascript:myFunction2();">Sign Up</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
 
+<<<<<<< HEAD
+    <div class = "jumbotron hidestuff">
+      <div class = "container">
+        <div class="row">
+          <!-- <img src='https://static.pexels.com/photos/127564/pexels-photo-127564.jpeg'/"> -->
+          <div class="col-md-8">
+            <h1>What is <span class="em-text">SchoolMS</span>?</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In at lacinia leo. Phasellus orci nulla, dapibus ac aliquet in, lobortis ac diam. Nunc sagittis, nunc vitae euismod efficitur, lorem magna malesuada magna, sit amet ultricies diam tortor suscipit nisl. Fusce iaculis nulla eu tincidunt porttitor. Morbi at ultrices mi, sed dignissim lacus.
+            </p>
+          </div>
+          <div class="col-md-4">
 
-    <div class = "container">
-      <div class="page-header"><h2>Manage My Classes</h2></div>
-    </div>
-    
-    <div class = "container">
-
-      <div class="col-sm-4 side_column"></div>
-      <div class="col-sm-4">
-        <div class="well well-lg">
-      
-         <!-- <script src="/wp-includes/js/addInput.js" language="Javascript" type="text/javascript"></script>-->
-            <form id="manageClassForm" method="POST" role="form" action ="/process-new-class">
-            <!--Examples-->
-            <button type='button' class='btn btn-default btn-lg btn-block' name='MathClass'>Math</button>
-            <button type='button' class='btn btn-default btn-lg btn-block' name='BiologyClass'>Biology</button>
-            <button type='button' class='btn btn-default btn-lg btn-block' name='ScienceClass'>Science</button>
-
-              <div id="existingClasses">
-                
-              </div>
-              <div id="dynamicInput">
-              <div id="noClassWarning"><p style="color: #F00000;">You don't have any classes yet. Click below to add.</p></div>
-               <!--Where the add class name input goes-->
-              </div>
-              <div id="studentInput">
-                <!--Where the add students form goes-->
-              </div>
-              <div id="createdClass">
-                <!--Where the created Class goes-->
-              </div>
-
-              <br>
-
-              <input class="btn btn-primary btn-lg btn-block" id="add_new_class" type="button" value="Add New Class" onClick="addInput('dynamicInput');">
-
-
-              <input class="btn btn-default" id="add_students" type="button" value="Add Students" onClick="addStudents('studentInput');">
-
-              <button class="btn btn-primary" id="submitForm" type="submit" value="Submit">Submit</button> 
-
-            </form>
+          </div>
         </div>
       </div>
-      <div class="col-sm-4 side_column"></div>
     </div>
 
+    <div class="row hidestuff div1">
+      <div class="col-md-12">
+        <h1>About</h1>
+      </div>
+    </div>
+    <div class="row hidestuff">
+      <div class="col-md-12">
+        <h1>Contact Us</h1>
+      </div>
+    </div>
+=======
+    
+<!--
+>>>>>>> d8bb109ca85ba07a8e98042c0518ea41c1658211
 
+    <div class="row hidestuff">
+      <div class="col-md-12">
+        <h1>Contact Us</h1>
+      </div>
+    </div>
+    <div class="row hidestuff div1">
+      <div class="col-md-12">
+        <p>
+          Fusce accumsan blandit nisl et suscipit. Nulla sit amet molestie metus. Duis sit amet molestie tortor, at facilisis turpis. Suspendisse vitae nisi elementum, mattis sem a, accumsan dolor. Nulla eu lorem sem.
 
+Maecenas egestas ex ut purus finibus, a congue ex hendrerit. In semper tellus eros, at lacinia elit lobortis varius. Praesent volutpat, lectus vitae vehicula porttitor, justo dui gravida mauris, sed convallis dolor nulla sit amet metus. Vestibulum mattis orci non eros vestibulum pellentesque. Ut eu nulla accumsan, ullamcorper orci at, malesuada mauris. Donec cursus enim ut tincidunt lacinia.
+        </p>
+      </div>
+    </div>
+-->
+
+    <form class="login_form" role="form" method="POST" action="/processlogin">
+      <div class="form-group">
+        <label for="formGroupExampleInput">Username</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput2">Password</label>
+        <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+      </div>
+      <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+
+    <form class="signup_form" role="form" method="POST" action="/processlogin">
+      <img src="http://girltalkhq.com/wp-content/uploads/2013/02/Cambodia.jpg" id='signuppics'/>
+      <div class="form-group">
+        <label for="formGroupExampleInput">Username</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput2">Password</label>
+        <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+      </div>
+      <button type="submit" class="btn btn-primary">Sign Up</button>
+    </form>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+
+    </script>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -94,6 +138,5 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="bootstrap.js"></script>
-    <script src="class_custom.js"></script>
   </body>
 </html>
