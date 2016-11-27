@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>SchoolMS</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand em-text">SchoolMS</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <!--<li><a href="#">Home</a></li>-->
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+
+    <div class = "container">
+      <div class="page-header"><h2>Manage My Classes</h2></div>
+    </div>
+    
+    <div class = "container">
+
+      <div class="col-sm-4 side_column"></div>
+      <div class="col-sm-4">
+        <div class="well well-lg">
+      
+         <!-- <script src="/wp-includes/js/addInput.js" language="Javascript" type="text/javascript"></script>-->
+            <form id="manageClassForm" method="POST" role="form" action ="/process-new-class">
+            <!--Examples-->
+            <button type='button' class='btn btn-default btn-lg btn-block' name='MathClass'>Math</button>
+            <button type='button' class='btn btn-default btn-lg btn-block' name='BiologyClass'>Biology</button>
+            <button type='button' class='btn btn-default btn-lg btn-block' name='ScienceClass'>Science</button>
+
+              <div id="existingClasses">
+                
+              </div>
+              <div id="dynamicInput">
+              <div id="noClassWarning"><p style="color: #F00000;">You don't have any classes yet. Click below to add.</p></div>
+               <!--Where the add class name input goes-->
+              </div>
+              <div id="studentInput">
+                <!--Where the add students form goes-->
+              </div>
+              <div id="createdClass">
+                <!--Where the created Class goes-->
+              </div>
+
+              <br>
+
+              <input class="btn btn-primary btn-lg btn-block" id="add_new_class" type="button" value="Add New Class" onClick="addInput('dynamicInput');">
+
+
+              <input class="btn btn-default" id="add_students" type="button" value="Add Students" onClick="addStudents('studentInput');">
+
+              <button class="btn btn-primary" id="submitForm" type="submit" value="Submit">Submit</button> 
+
+            </form>
+        </div>
+      </div>
+      <div class="col-sm-4 side_column"></div>
+    </div>
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="bootstrap.js"></script>
+    <script src="custom.js"></script>
+  </body>
+</html>
