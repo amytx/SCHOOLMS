@@ -1,0 +1,31 @@
+body {
+  padding-top: 50px;
+}
+.em-text{
+  color:white !important;
+}
+
+.jumbotron{  
+  background-size: 100% 100%;
+}
+
+.page-header{
+	text-align: center;
+}
+
+h2{
+	text-align: center;
+}
+
+label{
+	text-align: left;
+}
+
+button{
+	text-align: center;
+}
+
+.jumbotron .app-btn{
+  width: 40%;
+  margin-right: 30px;
+}
