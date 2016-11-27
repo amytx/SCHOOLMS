@@ -1,0 +1,62 @@
+body {
+  padding-top: 50px;
+}
+.em-text{
+  color:white !important;
+}
+
+.jumbotron{  
+  background-size: 100% 100%;
+}
+
+.page-header{
+	text-align: center;
+}
+
+h2{
+	text-align: center;
+}
+
+label{
+	text-align: left;
+}
+
+button{
+	text-align: center;
+}
+
+.jumbotron .app-btn{
+  width: 40%;
+  margin-right: 30px;
+}
+.hidden_form {
+	display: none;
+}
+.hide {
+	display: none;
+}
+.form {
+	text-align: center;
+	display: none;
+}
+.class_name {
+	width: 100%;
+	height: 40px;
+}
+.studentInfo {
+	display: none;
+}
+#add_students {
+	display: none;
+}
+#submitForm {
+	display: none;
+}
+#noClassWarning {
+	display: none;
+}
+#manageClassForm {
+	overflow-y: auto;
+	height: 400px; 
+}
+
